@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package app;
+
+service Bees {
+  rpc CheckWord (InputWord) returns (WordInDict) {}
+
+}
+
+message InputWord {
+  string word = 1;
+}
+
+message WordInDict {
+  bool exist = 1;
+}
